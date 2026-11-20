@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Event | Golden Heyday Caterers</title>
+
+    <link rel="stylesheet" href="booking.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span>Golden Heyday</span>
+        <small>CATERERS</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="navbar" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="menu.html">Menu</a>
+        <a href="location.html">Locations</a>
+        <a href="booking.html" class="active nav-button">Book Now</a>
+    </nav>
+
+</header>
+
+<section class="booking-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span>LET'S PLAN SOMETHING SPECIAL</span>
+
+        <h1>
+            Make Your Occasion
+            <em>Truly Memorable</em>
+        </h1>
+
+        <p>
+            Tell us about your celebration and catering requirements.
+            Let's start planning your event together.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="booking-section">
+
+    <div class="booking-container">
+
+        <div class="booking-info">
+
+            <span class="section-label">YOUR EVENT, OUR ATTENTION</span>
+
+            <h2>
+                Let's Create
+                <em>Something Beautiful</em>
+            </h2>
+
+            <p>
+                Share a few details about your upcoming event.
+                Our team can review your enquiry and discuss
+                suitable catering arrangements with you.
+            </p>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Call Us</h3>
+                    <a href="tel:+919388483565">+91 93884 83565</a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email Us</h3>
+                    <a href="mailto:goldenheydaycaterers@gmail.com">
+                        goldenheydaycaterers@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/918137924760" target="_blank" rel="noopener">
+                        Chat With Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <h3>Our Location</h3>
+                    <p>Kizhakkambalam, Kerala, India</p>
+                </div>
+            </div>
+
+            <div class="booking-image">
+                <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+                alt="Elegant celebration dining setup">
+            </div>
+
+        </div>
+
+        <div class="booking-form-box">
+
+            <div class="form-heading">
+                <span class="section-label">EVENT ENQUIRY</span>
+                <h2>Tell Us About Your Event</h2>
+                <p>Fields marked with * are required.</p>
+            </div>
+
+            <form id="bookingForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="customerName">Full Name *</label>
+                        <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your name"
+                        required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter phone number"
+                        pattern="[0-9+\s-]{10,16}"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email">
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="eventType">Event Type *</label>
+
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select event type</option>
+                            <option>Wedding</option>
+                            <option>Engagement</option>
+                            <option>Birthday Party</option>
+                            <option>Corporate Event</option>
+                            <option>Traditional Function</option>
+                            <option>Private Party</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDate">Event Date *</label>
+
+                        <input
+                        type="date"
+                        id="eventDate"
+                        name="eventDate"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="eventLocation">Event Location *</label>
+
+                        <select id="eventLocation" name="eventLocation" required>
+                            <option value="">Select location</option>
+                            <option>Kizhakkambalam</option>
+                            <option>Pala</option>
+                            <option>Muvattupuzha</option>
+                            <option>Ernakulam</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guestCount">Expected Guests *</label>
+
+                        <input
+                        type="number"
+                        id="guestCount"
+                        name="guestCount"
+                        min="1"
+                        placeholder="Number of guests"
+                        required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">Preferred Service Format</label>
+
+                    <select id="serviceType" name="serviceType">
+                        <option value="">Select service format</option>
+                        <option>Buffet Service</option>
+                        <option>Plated Dining</option>
+                        <option>Not Decided Yet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="foodRequirements">Food / Menu Requirements</label>
+
+                    <textarea
+                    id="foodRequirements"
+                    name="foodRequirements"
+                    rows="4"
+                    placeholder="Tell us about your preferred dishes, menu or special requirements..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+
+                    <textarea
+                    id="message"
+                    name="message"
+                    rows="3"
+                    placeholder="Any additional information about your event..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Send Enquiry
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p class="form-note">
+                    Submitting this form opens WhatsApp with your enquiry.
+                    You can review and send the message there.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="booking-bottom">
+
+    <span>GOLDEN HEYDAY CATERERS</span>
+
+    <h2>Every Celebration Deserves a Golden Experience.</h2>
+
+    <a href="https://www.instagram.com/goldenheyday.caterers/"
+       target="_blank" rel="noopener" class="gold-button">
+        Follow Us on Instagram
+        <i class="fab fa-instagram"></i>
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        <h2>Golden Heyday</h2>
+        <span>CATERERS</span>
+
+        <p>
+            Catering and food-service experiences for weddings,
+            celebrations and special occasions.
+        </p>
+    </div>
+
+    <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="menu.html">Our Menu</a>
+        <a href="location.html">Locations</a>
+    </div>
+
+    <div class="footer-contact">
+        <h3>Contact Us</h3>
+
+        <p><i class="fas fa-map-marker-alt"></i>
+            Kizhakkambalam, Kerala, India
+        </p>
+
+        <p><i class="fas fa-phone"></i>
+            +91 8137924760
+        </p>
+
+        <p><i class="fas fa-envelope"></i>
+            goldenheydaycaterers@gmail.com
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/goldenheyday.caterers/"
+               target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/918137924760"
+               target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+
+</footer>
+
+<div class="copyright">
+    © 2026 Golden Heyday Caterers. All Rights Reserved.
+</div>
+
+<script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    const eventDate = document.getElementById("eventDate");
+
+    const today = new Date();
+    const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+
+    eventDate.min = localToday;
+
+    const bookingForm = document.getElementById("bookingForm");
+
+    bookingForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!bookingForm.reportValidity()) {
+            return;
+        }
+
+        const data = new FormData(bookingForm);
+
+        const message = `
+*GOLDEN HEYDAY CATERERS - EVENT ENQUIRY*
+
+*Customer Details*
+Name: ${data.get("customerName")}
+Phone: ${data.get("phone")}
+Email: ${data.get("email") || "Not provided"}
+
+*Event Details*
+Event Type: ${data.get("eventType")}
+Event Date: ${data.get("eventDate")}
+Location: ${data.get("eventLocation")}
+Expected Guests: ${data.get("guestCount")}
+
+*Service Format*
+${data.get("serviceType") || "Not specified"}
+
+*Food / Menu Requirements*
+${data.get("foodRequirements") || "Not specified"}
+
+*Additional Message*
+${data.get("message") || "None"}
+        `.trim();
+
+        const whatsappURL =
+            "https://wa.me/918137924760?text=" +
+            encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+</script>
+
+</body>
+</html>
